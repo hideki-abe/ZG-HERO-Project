@@ -7,19 +7,46 @@ class Main {
   @Author Lucas Hideki Abe
  */
     static void main(String[] args) {
+        Scanner sc = new Scanner(System.in)
 
         ArrayList<PessoaFisica> candidatos = new ArrayList<>()
         ArrayList<PessoaJuridica> empresas = new ArrayList<>()
         populaCandidatos(candidatos)
         populaEmpresas(empresas)
 
-        
+        def x = 1
+        loop:
+        for(;;){
+            if(x != 0){
+                Random random = new Random()
+                int num = candidatos.size()
+                num = random.nextInt(num)
+                PessoaFisica candidato = candidatos.get(num)
 
 
+                println candidato
 
 
+                println "Digite 0 para sair do linkeTinder, ou qualquer outro número para continuar"
+                x = sc.nextInt()
+            }else {
+                println "Fim de programa"
+                break loop
+            }
 
+        }
+
+        sc.close()
     }
+
+    static listaCandidatos(def candidatos){
+        println candidatos
+    }
+
+    static listaEmpresas(def empresas){
+        println empresas
+    }
+
     static populaCandidatos(ArrayList candidatos){
 
         List list = []
