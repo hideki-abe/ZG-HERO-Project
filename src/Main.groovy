@@ -26,6 +26,12 @@ class Main {
 
                 println candidato
 
+                println "Dar like no candidato? [s/n]"
+
+                def like = sc.next()
+                    if(0){
+                        //codigo para curtidas aqui
+                    }
 
                 println "Digite 0 para sair do linkeTinder, ou qualquer outro número para continuar"
                 x = sc.nextInt()
