@@ -1,0 +1,7 @@
+package Pessoas
+
+interface Pessoa {
+
+
+
+}
