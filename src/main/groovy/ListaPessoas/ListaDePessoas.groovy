@@ -8,29 +8,22 @@ class ListaDePessoas {
     ArrayList<PessoaFisica> candidatos = new ArrayList<>()
     ArrayList<PessoaJuridica> empresas = new ArrayList<>()
 
+    //Construtor que popula automaticamente os arrays ao inicializar
     ListaDePessoas(){
         populaEmpresas()
         populaCandidatos()
 
     }
 
-
-    def listaCandidatos(def candidatos){
-        println candidatos
+    def listaCandidatos(){
+        println this.candidatos
     }
 
-    def listaEmpresas(def empresas){
-        println empresas
+    def listaEmpresas(){
+        println this.empresas
     }
 
-    def cadastraCandidato(){
-
-    }
-
-    def cadastraEmpresa(){
-
-    }
-
+    //Método para popular o Array de Candidatos simulando um Banco de Dados
     def populaCandidatos(){
 
         List list = []
@@ -75,6 +68,7 @@ class ListaDePessoas {
 
     }
 
+    //Método para popular o Array de Empresas simulando um Banco de Dados
     def populaEmpresas(){
 
         List list = []

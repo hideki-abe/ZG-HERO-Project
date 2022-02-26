@@ -3,7 +3,7 @@ package Pessoas
 import groovy.transform.Canonical
 
 @Canonical
-class PessoaJuridica {
+class PessoaJuridica implements Pessoa{
 
     String nome
     String email
@@ -17,9 +17,9 @@ class PessoaJuridica {
 
     @Override
     public String toString() {
-        return "Candidato: \n" +
+        return "Empresa: \n" +
                 "--------------------- \n" +
-                "Empresa: " + nome + '\n' +
+                "Nome: " + nome + '\n' +
                 "Email: " + email + '\n' +
                 "Cnpj: " + cnpj + '\n' +
                 "País: " + pais + '\n' +
@@ -31,4 +31,10 @@ class PessoaJuridica {
         ;
     }
 
+    @Override
+    def cadastra(List lista) {
+        lista.add(new PessoaFisica(this.nome, this.email, this.cpf,
+                this.idade, this.estado, this.cep, this.descricao, this.competencias))
+        println "Cadastro realizado com sucesso!\n"
+    }
 }
