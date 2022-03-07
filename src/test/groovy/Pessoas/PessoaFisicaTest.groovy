@@ -10,7 +10,7 @@ class PessoaFisicaTest {
     @Test
     void testCadastra() {
         println "Cadastrando..."
-        ListaDePessoas lista = Mockito.mock(ListaDePessoas)
+        ListaDePessoas lista = new ListaDePessoas()
         List list = []
 
         PessoaFisica pessoa = new PessoaFisica("João","joao@email.com",
@@ -21,7 +21,9 @@ class PessoaFisicaTest {
 
         println pessoa.getNome()
 
-        pessoa.cadastra(lista.getEmpresas())
+        pessoa.cadastra(lista.getCandidatos())
+
+        Assert.assertEquals(pessoa, lista.getCandidatos().get(lista.getCandidatos().size() - 1))
 
     }
 }

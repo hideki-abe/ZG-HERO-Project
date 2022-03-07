@@ -98,8 +98,8 @@ class Main {
             }
         }
         //Para conferir se o cadastro foi bem sucedido
-        //lista.listaCandidatos()
-        lista.listaEmpresas()
+        lista.listaCandidatos()
+        //lista.listaEmpresas()
 
         sc.close()
     }

@@ -9,7 +9,7 @@ class PessoaJuridicaTest {
     @Test
     void testCadastra() {
         println "Cadastrando..."
-        ListaDePessoas lista = Mockito.mock(ListaDePessoas)
+        ListaDePessoas lista = new ListaDePessoas()
         List list = []
 
         PessoaJuridica pessoa = new PessoaJuridica("Empresa 1","empresa1@email.com",
@@ -21,6 +21,8 @@ class PessoaJuridicaTest {
         println pessoa.getNome()
 
         pessoa.cadastra(lista.getEmpresas())
+
+        Assert.assertEquals(pessoa, lista.getEmpresas().get(lista.getEmpresas().size() - 1))
 
     }
 }
