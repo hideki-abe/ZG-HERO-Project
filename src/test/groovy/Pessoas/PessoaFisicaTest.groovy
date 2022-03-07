@@ -10,15 +10,18 @@ class PessoaFisicaTest {
     @Test
     void testCadastra() {
         println "Cadastrando..."
-        ListaDePessoas lista = Mockito.mock(ListaDePessoas.class)
+        ListaDePessoas lista = Mockito.mock(ListaDePessoas)
+        List list = []
 
-        PessoaFisica pessoa = new PessoaFisica()
+        PessoaFisica pessoa = new PessoaFisica("João","joao@email.com",
+                "00000000000", 20, "Goiás", "00000000",
+                "Goiano com muita vontade de trabalhar!")
+        list = ["Java", "Spring Framework", "React"]
+        pessoa.setCompetencias(list)
+
         println pessoa.getNome()
-        pessoa.cadastra(lista.getCandidatos())
 
-        Assert.assertTrue(!lista.getCandidatos().isEmpty())
-
-        println "Cadastro realizado com sucesso!"
+        pessoa.cadastra(lista.getEmpresas())
 
     }
 }
