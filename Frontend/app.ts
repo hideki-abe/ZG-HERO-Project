@@ -1,12 +1,9 @@
 
-const pessoa = document.querySelector(".pessoa")
 
-
-console.log(pessoa)
-
-function atualizaPessoa(){
-
+function cadastroCandidato(){
+    console.log("Estou funcionando!");
 }
 
-
-$('body').append('Usando jQuery')
+function cadastroEmpresa(){
+    
+}

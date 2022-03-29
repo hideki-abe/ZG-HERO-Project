@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 class PessoaFisica {
     constructor(nome, email, cpf, idade, estado, descricao, competencias) {
         this.nome = nome;
@@ -10,3 +11,4 @@ class PessoaFisica {
         this.competencias = competencias;
     }
 }
+exports.default = PessoaFisica;

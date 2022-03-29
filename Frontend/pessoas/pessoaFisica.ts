@@ -1,4 +1,4 @@
-class PessoaFisica{
+export default class PessoaFisica{
     nome: string
     email: number
     cpf: number
