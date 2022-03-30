@@ -1,6 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-class PessoaJuridica {
+export default class PessoaJuridica {
     constructor(nome, email, cnpj, pais, estado, descricao, competencias) {
         this.nome = nome;
         this.email = email;
@@ -11,4 +9,3 @@ class PessoaJuridica {
         this.competencias = competencias;
     }
 }
-exports.default = PessoaJuridica;

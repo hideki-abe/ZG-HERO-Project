@@ -1,15 +1,15 @@
 export default class PessoaJuridica{
     nome: string
-    email: number
-    cnpj: number
+    email: string
+    cnpj: any
     pais: string
     estado: string
     descricao: string
-    competencias: []
+    competencias: Array<string>
 
 
-    constructor(nome: string, email: number, cnpj: number, pais: string, estado:string,
-        descricao: string, competencias: []){
+    constructor(nome: string, email: string, cnpj: any, pais: string, estado:string,
+        descricao: string, competencias: Array<string>){
         this.nome = nome
         this.email = email
         this.cnpj = cnpj

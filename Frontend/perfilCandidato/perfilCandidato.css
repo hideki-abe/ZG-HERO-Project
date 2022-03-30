@@ -65,3 +65,8 @@ body, html{
     position: relative;
     margin-top: 0.5em;
 }
+
+.nome, .cnpj, .email{
+    filter: blur(3px);
+
+}
