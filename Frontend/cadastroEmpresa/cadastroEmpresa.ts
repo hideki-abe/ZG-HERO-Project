@@ -28,7 +28,8 @@ function validaEmpresa(novoNome:string, novoEmail:string, novoCnpj:string,
         const regexCep = /^[0-9]{5}-?[0-9]{3}$/
         const regexDescricao = /\w{1,15}/g
         const regexComp = competencias.value.split(/,/)
-    
+        
+        link.href = "./cadastroEmpresa.html"
         if(!regexNome.test(novoNome)){
             alert("Nome inválido!")
             return false
@@ -51,6 +52,7 @@ function validaEmpresa(novoNome:string, novoEmail:string, novoCnpj:string,
             alert("Descrição inválida!")
         }
         else{
+            link.href = "../perfilEmpresa/perfilEmpresa.html"
             return true
         }
     
