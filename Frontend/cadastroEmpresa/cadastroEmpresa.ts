@@ -39,7 +39,7 @@ function validaEmpresa(novoNome:string, novoEmail:string, novoCnpj:string,
         }else if(!regexCnpj.test(novoCnpj)){
             alert("Cpf inválido!")
             return false
-        }else if(!regexPais.test(novoPais){
+        }else if(!regexPais.test(novoPais)){
             alert("Idade inválida!")
             return false
         }else if(!regexEstado.test(novoEstado)){
