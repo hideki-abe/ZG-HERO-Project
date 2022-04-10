@@ -24,6 +24,9 @@ A aplicação se resume à um programa que simule um tinder para empresas e cand
 <h3>3) Terceira parte do projeto(K1-T5: Javascript/Typescript)</h3>
 
   - Na etapa de Typescript, o Frontend da aplicação deve ser aplicado sem a integração. Todo o código do Frontend está na pasta "Frontend", e para executar o projeto, basta dar "npm start" nessa pasta e abrir no navegador no localhost:8080/. A página inicial estará na pasta "paginaInicial", em "tipo.html", ou simplesmente digite localhost:8080/paginaInicial/tipo.html.
+
+<h3>4) Quarta parte do projeto(K1-T6: REGEX)</h3>
+  - Nessa etapa foi realizada a implementação de expressões REGEX no Frontend da aplicação.
   
 <h3>5) Quinta parte do projeto(K1-T7: Banco de Dados)</h3>
  - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas. As seguintes tabelas foram desenvolvidas. <br/> <br/>
