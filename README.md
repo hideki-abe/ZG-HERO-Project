@@ -94,7 +94,7 @@ INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, ce
 		('Luana', 'Alves', '1990-09-12', 'luana@email.com', '123456789', 'Brasil', '74455050', 'Goiana com muita vontade de trabalhar', '123456', 7);<br/><br/>
 
 
-INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 1', '123456789', 'empresa1@email.com', 'Empresa buscando 'funcionários', 'Brasil', '74455050', '123456'); <br/>
+INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 1', '123456789', 'empresa1@email.com', 'Empresa buscando funcionários', 'Brasil', '74455050', '123456'); <br/>
 INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 2', '123456789', 'empresa2@email.com', 'Procura-se especialista em React', 'Brasil', '74455050', '123456'); <br/>
 INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 3', '123456789', 'empresa3@email.com', 'Procuramos dev fullstack voltado para Java','Brasil', '74455050', '123456');                                                                        
 INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 4', '123456789', 'empresa4@email.com', 'Procura-se estagiários, Salário: R$ 1000,00', 'Brasil', '74455050', '123456');                                                                             
