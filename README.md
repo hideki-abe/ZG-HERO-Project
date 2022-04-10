@@ -28,46 +28,46 @@ A aplicação se resume à um programa que simule um tinder para empresas e cand
 <h3>3) Quinta parte do projeto(K1-T7: Banco de Dados)</h3>
  - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas.
 
-CREATE TABLE competencias (
-  id SERIAL nOT NULL PRIMARY KEY,
-  nome VARCHAR(45) NOT NULL
-);
+CREATE TABLE competencias ( 
+  id SERIAL NOT NULL PRIMARY KEY, <br/>
+  nome VARCHAR(45) NOT NULL <br/>
+);<br/><br/>
 
-CREATE TABLE candidatos (
-  id SERIAL NOT NULL PRIMARY KEY,
-  nome VARCHAR(45) NOT NULL,
-  sobrenome VARCHAR(45) NOT NULL,
-  data_de_nascimento VARCHAR(45) NOT NULL,
-  email VARCHAR(45) NOT NULL,
-  cpf VARCHAR(45) NOT NULL,
-  pais VARCHAR(45) NOT NULL,
-  cep VARCHAR(45) NOT NULL,
-  descricao VARCHAR(100) NOT NULL,
-  senha VARCHAR(20) NOT NULL,
-  id_competencias INT REFERENCES competencias(id) NOT NULL
-);
+CREATE TABLE candidatos ( <br/>
+  id SERIAL NOT NULL PRIMARY KEY, <br/>
+  nome VARCHAR(45) NOT NULL, <br/>
+  sobrenome VARCHAR(45) NOT NULL, <br/>
+  data_de_nascimento VARCHAR(45) NOT NULL, <br/>
+  email VARCHAR(45) NOT NULL, <br/>
+  cpf VARCHAR(45) NOT NULL, <br/>
+  pais VARCHAR(45) NOT NULL, <br/>
+  cep VARCHAR(45) NOT NULL, <br/>
+  descricao VARCHAR(100) NOT NULL, <br/>
+  senha VARCHAR(20) NOT NULL, <br/>
+  id_competencias INT REFERENCES competencias(id) NOT NULL <br/>
+); <br/>
 
-CREATE TABLE empresas (
-  id SERIAL NOT NULL PRIMARY KEY,
-  nome VARCHAR(45) NOT NULL,
-  cnpj VARCHAR(45) NOT NULL,
-  email VARCHAR(45) NOT NULL,
-  descricao VARCHAR(45) NOT NULL,
-  pais VARCHAR(45) NOT NULL,
-  cep VARCHAR(45) NOT NULL,
-  senha VARCHAR(20) NOT NULL
-);
+CREATE TABLE empresas ( <br/>
+  id SERIAL NOT NULL PRIMARY KEY, <br/>
+  nome VARCHAR(45) NOT NULL, <br/>
+  cnpj VARCHAR(45) NOT NULL, <br/>
+  email VARCHAR(45) NOT NULL, <br/>
+  descricao VARCHAR(45) NOT NULL, <br/>
+  pais VARCHAR(45) NOT NULL, <br/>
+  cep VARCHAR(45) NOT NULL, <br/>
+  senha VARCHAR(20) NOT NULL <br/>
+); <br/> <br/>
 
 
-CREATE TABLE vagas (
-  id SERIAL PRIMARY KEY,
-  nome VARCHAR(45) NOT NULL,
-  descricao VARCHAR(45) NOT NULL,
-  competencias VARCHAR(45) NOT NULL,
-  local VARCHAR(45) NOT NULL,
-  id_empresas INT REFERENCES empresas(id) NOT NULL,
-  id_competencias INT REFERENCES competencias(id) NOT NULL
-);
+CREATE TABLE vagas ( <br/>
+  id SERIAL PRIMARY KEY, <br/>
+  nome VARCHAR(45) NOT NULL, <br/>
+  descricao VARCHAR(45) NOT NULL, <br/>
+  competencias VARCHAR(45) NOT NULL, <br/>
+  local VARCHAR(45) NOT NULL, <br/>
+  id_empresas INT REFERENCES empresas(id) NOT NULL, <br/>
+  id_competencias INT REFERENCES competencias(id) NOT NULL <br/>
+); <br/><br/>
 
 
 <h3>Executando o projeto: Backend </h3>
