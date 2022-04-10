@@ -25,6 +25,50 @@ A aplicação se resume à um programa que simule um tinder para empresas e cand
 
   - Na etapa de Typescript, o Frontend da aplicação deve ser aplicado sem a integração. Todo o código do Frontend está na pasta "Frontend", e para executar o projeto, basta dar "npm start" nessa pasta e abrir no navegador no localhost:8080/. A página inicial estará na pasta "paginaInicial", em "tipo.html", ou simplesmente digite localhost:8080/paginaInicial/tipo.html.
   
+<h3>3) Quinta parte do projeto(K1-T7: Banco de Dados)</h3>
+ - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas.
+
+CREATE TABLE competencias (
+  id SERIAL nOT NULL PRIMARY KEY,
+  nome VARCHAR(45) NOT NULL
+);
+
+CREATE TABLE candidatos (
+  id SERIAL NOT NULL PRIMARY KEY,
+  nome VARCHAR(45) NOT NULL,
+  sobrenome VARCHAR(45) NOT NULL,
+  data_de_nascimento VARCHAR(45) NOT NULL,
+  email VARCHAR(45) NOT NULL,
+  cpf VARCHAR(45) NOT NULL,
+  pais VARCHAR(45) NOT NULL,
+  cep VARCHAR(45) NOT NULL,
+  descricao VARCHAR(100) NOT NULL,
+  senha VARCHAR(20) NOT NULL,
+  id_competencias INT REFERENCES competencias(id) NOT NULL
+);
+
+CREATE TABLE empresas (
+  id SERIAL NOT NULL PRIMARY KEY,
+  nome VARCHAR(45) NOT NULL,
+  cnpj VARCHAR(45) NOT NULL,
+  email VARCHAR(45) NOT NULL,
+  descricao VARCHAR(45) NOT NULL,
+  pais VARCHAR(45) NOT NULL,
+  cep VARCHAR(45) NOT NULL,
+  senha VARCHAR(20) NOT NULL
+);
+
+
+CREATE TABLE vagas (
+  id SERIAL PRIMARY KEY,
+  nome VARCHAR(45) NOT NULL,
+  descricao VARCHAR(45) NOT NULL,
+  competencias VARCHAR(45) NOT NULL,
+  local VARCHAR(45) NOT NULL,
+  id_empresas INT REFERENCES empresas(id) NOT NULL,
+  id_competencias INT REFERENCES competencias(id) NOT NULL
+);
+
 
 <h3>Executando o projeto: Backend </h3>
   Para executar o projeto, é necessário utilizar a IDE Intellijj para maior compatibilidade. Ao se abrir o projeto, é possível rodar o painel principal "Main" na própria IDE, ou também os testes unitários dando <b>run</b> na classe.
