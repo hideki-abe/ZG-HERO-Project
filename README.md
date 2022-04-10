@@ -100,6 +100,13 @@ INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Em
 INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 4', '123456789', 'empresa4@email.com', 'Procura-se estagiários, Salário: R$ 1000,00', 'Brasil', '74455050', '123456');                                                                             
 INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 5', '123456789', 'empresa5@email.com', 'Procuramos aprendizes', 'Brasil', '74455050', '123456'); <br/>
 
+INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor backend', 'Procuramos dev fullstack voltado para Java', 'Java', 'Brasil', 3, 3);
+INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor frontend', 'Procuramos dev fullstack voltado para React', 'React', 'Brasil', 2, 3);  
+INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor fullstack', 'Procuramos dev fullstack Javascript/PHP', 'Javascript/PHP', 'Brasil', 1, 3);  
+INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor React', 'Procuramos dev Júnior frontend', 'Javascript', 
+'Brasil', 4, 2);
+INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor Angular', 'Procuramos aprendizes', 'Javascript', 'Brasil', 5, 2);
+
 
 
 <h3>Executando o projeto: Backend </h3>
