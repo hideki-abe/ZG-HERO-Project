@@ -68,7 +68,6 @@ CREATE TABLE vagas ( <br/>
   descricao VARCHAR(45) NOT NULL, <br/>
   competencias VARCHAR(45) NOT NULL, <br/>
   local VARCHAR(45) NOT NULL, <br/>
-  qtd_vagas INT(2) NOT NULL <br/>
   id_empresas INT REFERENCES empresas(id) NOT NULL, <br/>
   id_competencias INT REFERENCES competencias(id) NOT NULL <br/>
 ); <br/><br/>
