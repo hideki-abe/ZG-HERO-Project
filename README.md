@@ -66,7 +66,6 @@ CREATE TABLE vagas ( <br/>
   id SERIAL PRIMARY KEY, <br/>
   nome VARCHAR(45) NOT NULL, <br/>
   descricao VARCHAR(45) NOT NULL, <br/>
-  competencias VARCHAR(45) NOT NULL, <br/>
   lugar VARCHAR(45) NOT NULL, <br/>
   id_empresas INT REFERENCES empresas(id) NOT NULL, <br/>
   id_competencias INT REFERENCES competencias(id) NOT NULL <br/>
