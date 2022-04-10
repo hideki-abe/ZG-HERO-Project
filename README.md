@@ -103,7 +103,7 @@ INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES (
 INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor frontend', 'Procuramos dev fullstack voltado para React','Brasil', 2, 3);  
 INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor fullstack', 'Procuramos dev fullstack Javascript/PHP',  'Brasil', 1, 3);  
 INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor React', 'Procuramos dev Júnior frontend', 
-'Brasil', 4, 2);
+'Brasil', 4, 2); </br>
 INSERT INTO vagas(nome, descricao, local, id_empresas, id_competencias) VALUES ('Desenvolvedor Angular', 'Procuramos aprendizes', 'Brasil', 5, 2);
 
 
