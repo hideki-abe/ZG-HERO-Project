@@ -68,9 +68,38 @@ CREATE TABLE vagas ( <br/>
   descricao VARCHAR(45) NOT NULL, <br/>
   competencias VARCHAR(45) NOT NULL, <br/>
   local VARCHAR(45) NOT NULL, <br/>
+  qtd_vagas INT(2) NOT NULL <br/>
   id_empresas INT REFERENCES empresas(id) NOT NULL, <br/>
   id_competencias INT REFERENCES competencias(id) NOT NULL <br/>
 ); <br/><br/>
+
+INSERT INTO competencias(nome) VALUES ('React'); <br/>
+INSERT INTO competencias(nome) VALUES ('Javascript'); <br/>
+INSERT INTO competencias(nome) VALUES ('Java');<br/>
+INSERT INTO competencias(nome) VALUES ('Groovy'); <br/>
+INSERT INTO competencias(nome) VALUES ('HTML/CSS'); <br/>
+INSERT INTO competencias(nome) VALUES ('PHP'); <br/>
+INSERT INTO competencias(nome) VALUES ('Angular'); <br/>
+INSERT INTO competencias(nome) VALUES ('PostgreeSQL'); <br/> <br/>
+
+INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, cep, descricao, senha, id_competencias) VALUES <br/>
+		('Lucas', 'Hideki', '1997-12-16', 'hideki-abe@hotmail.com', '123456789', 'Brasil', '74455050', 'Estudante de engenharia de computação', '123456', 1); <br/>
+INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, cep, descricao, senha, id_competencias) VALUES <br/>
+		('João', 'Gomes', '2000-05-14', 'joão@email.com', '123456789', 'Brasil', '12345678', 'Goiano com muita vontade de trabalhar', '123456', 2); 
+INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, cep, descricao, senha, id_competencias) VALUES  <br/>
+		('Maria', 'Silva', '2003-03-30', 'maria@email.com', '123456789', 'Brasil', '74455050', 'Estudante de engeharia de software', '123456', 5);     
+INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, cep, descricao, senha, id_competencias) VALUES <br/>
+		('Ricardo', 'Alves', '1980-06-06', 'ricardo@email.com', '123456789', 'Brasil', '74455050', 'Programador Java', '123456', 3);    
+INSERT INTO candidatos(nome, sobrenome, data_de_nascimento, email, cpf, pais, cep, descricao, senha, id_competencias) VALUES <br/>
+		('Luana', 'Alves', '1990-09-12', 'luana@email.com', '123456789', 'Brasil', '74455050', 'Goiana com muita vontade de trabalhar', '123456', 7);<br/><br/>
+
+
+INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 1', '123456789', 'empresa1@email.com', 'Empresa buscando 'funcionários', 'Brasil', '74455050', '123456'); <br/>
+INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 2', '123456789', 'empresa2@email.com', 'Procura-se especialista em React', 'Brasil', '74455050', '123456'); <br/>
+INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 3', '123456789', 'empresa3@email.com', 'Procuramos dev fullstack voltado para Java','Brasil', '74455050', '123456');                                                                        
+INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 4', '123456789', 'empresa4@email.com', 'Procura-se estagiários, Salário: R$ 1000,00', 'Brasil', '74455050', '123456');                                                                             
+INSERT INTO empresas(nome, cnpj, email, descricao, pais, cep, senha) VALUES ('Empresa 5', '123456789', 'empresa5@email.com', 'Procuramos aprendizes', 'Brasil', '74455050', '123456'); <br/>
+
 
 
 <h3>Executando o projeto: Backend </h3>
