@@ -28,7 +28,7 @@ A aplicação se resume à um programa que simule um tinder para empresas e cand
 <h3>3) Quinta parte do projeto(K1-T7: Banco de Dados)</h3>
  - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas. As seguintes tabelas foram desenvolvidas. <br/>
 
-CREATE TABLE competencias ( 
+CREATE TABLE competencias ( <br/>
   id SERIAL NOT NULL PRIMARY KEY, <br/>
   nome VARCHAR(45) NOT NULL <br/>
 );<br/><br/>
