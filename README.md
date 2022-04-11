@@ -29,7 +29,8 @@ A aplicação se resume à um programa que simule um tinder para empresas e cand
   - Nessa etapa foi realizada a implementação de expressões REGEX no Frontend da aplicação.
   
 <h3>5) Quinta parte do projeto(K1-T7: Banco de Dados)</h3>
- - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas. As seguintes tabelas foram desenvolvidas. A workbench do MySQL foi utilizada para desenvolver o <a href="https://github.com/hideki-abe/ZG-HERO-Project/blob/master/MER/MER.png">MER do projeto</a>. <br/> <br/>
+  - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas. As seguintes tabelas foram desenvolvidas. A workbench do MySQL foi utilizada para desenvolver o <a href="https://github.com/hideki-abe/ZG-HERO-Project/blob/master/MER/MER.png">MER do projeto</a>. <br/> <br/>
+  - As classes do banco de dados estão na pasta DAO e para rodar com a integração no BD, uma classe Main foi desenvolvida para cada tabela do MER. Basta rodar cada Main separadamente e testar os CRUDS no Banco de Dados.
 
 CREATE TABLE competencias ( <br/>
   id SERIAL NOT NULL PRIMARY KEY, <br/>
