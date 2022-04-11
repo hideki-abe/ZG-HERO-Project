@@ -8,15 +8,28 @@ class MainEmpresa {
 
     static void main(String[] args) {
 
+        //LISTA EMPRESAS
         listar()
 
-        PessoaJuridica empresa = new PessoaJuridica("Empresa2","empresa2@email.com",
+        //INSERE EMPRESA
+        PessoaJuridica empresa1 = new PessoaJuridica("Empresa2","empresa2@email.com",
                 "11111111111", "Brasil", "São Paulo", "11111111",
                 "Descrição da empresa 2!")
         def list = ["Html/Css", "Javascript", "Angular"]
-        empresa.setCompetencias(list)
+        empresa1.setCompetencias(list)
+        insere(empresa1)
 
-        insere(empresa)
+        PessoaJuridica empresa2 = new PessoaJuridica("Creme Mel","empresa2@email.com",
+                "11111111111", "Brasil", "Goiás", "11111111",
+                "Descrição da Creme Mel!")
+        list = ["Html/Css", "Javascript", "Angular"]
+        empresa2.setCompetencias(list)
+
+        //ALTERA EMPRESA
+        altera(empresa2,"11111111111")
+
+        //REMOVE EMPRESA
+        remove("11111111111")
 
     }
 
@@ -29,6 +42,17 @@ class MainEmpresa {
         PessoaJuridicaDAO empresaDAO = new PessoaJuridicaDAO()
         empresaDAO.inserir(empresa)
 
+    }
+
+    def static altera(PessoaJuridica empresa, String cnpj){
+        PessoaJuridicaDAO empresaDAO = new PessoaJuridicaDAO()
+        empresaDAO.alterar(empresa, cnpj)
+
+    }
+
+    def static remove(String cnpj){
+        PessoaJuridicaDAO empresaDAO = new PessoaJuridicaDAO()
+        empresaDAO.remover(cnpj)
     }
 
 

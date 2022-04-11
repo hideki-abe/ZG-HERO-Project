@@ -84,5 +84,46 @@ class PessoaJuridicaDAO {
     }
 
 
+    //ALTERA PELO CNPJ
+    public boolean alterar(PessoaJuridica empresa, String cnpj){
+        String sql = "UPDATE empresas SET nome=?, cnpj=?, email=?, descricao=?, pais=?, cep=?" +
+                " WHERE cnpj=?"
+
+        try{
+            PreparedStatement stmt = connection.prepareStatement(sql)
+            stmt.setString(1, empresa.nome)
+            stmt.setString(2, empresa.cnpj.toString())
+            stmt.setString(3, empresa.email)
+            stmt.setString(4, empresa.descricao)
+            stmt.setString(5, empresa.estado)
+            stmt.setString(6, empresa.cep.toString())
+            stmt.setString(7, empresa.cnpj.toString())
+
+            stmt.execute()
+            return true
+
+        }catch(SQLException ex){
+            ex.printStackTrace()
+            println("Erro de conexão!")
+            return false
+        }
+
+
+    }
+
+    //REMOVE PELO CNPJ
+    public void remover(String cnpj){
+        String sql = "DELETE FROM empresas WHERE cnpj=?"
+        try{
+            PreparedStatement stmt = connection.prepareStatement(sql)
+            stmt.setString(1, cnpj)
+            stmt.execute()
+
+        } catch(SQLException ex){
+            ex.printStackTrace()
+        }
+
+    }
+
 
 }
