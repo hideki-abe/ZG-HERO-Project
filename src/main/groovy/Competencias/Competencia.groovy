@@ -8,6 +8,10 @@ class Competencia {
         this.nome = nome
     }
 
+    public Competencia(){
+
+    }
+
     @Override
     String toString() {
         return this.nome
