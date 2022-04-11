@@ -3,6 +3,7 @@ package DAO
 import Competencias.Competencia
 
 import java.sql.Connection
+import java.sql.DriverManager
 import java.sql.PreparedStatement
 import java.sql.ResultSet
 import java.sql.SQLException
@@ -18,6 +19,7 @@ class CompetenciasDAO {
             String user = "postgres"
             String password = "postgres"
             this.connection = DriverManager.getConnection(url, user, password)
+
         } catch (ClassNotFoundException | SQLException ex){
             println("Erro na conexão!")
             //Logger.getLogger(PessoaFisicaDAO.class.getName()).log(PlatformLogger.Level.SEVERE, null, ex)
