@@ -22,7 +22,6 @@ class PessoaJuridicaDAO {
             this.connection = DriverManager.getConnection(url, user, password)
         } catch (ClassNotFoundException | SQLException ex){
             println("Erro na conexão!")
-            //Logger.getLogger(PessoaFisicaDAO.class.getName()).log(PlatformLogger.Level.SEVERE, null, ex)
         }
     }
 
@@ -42,9 +41,6 @@ class PessoaJuridicaDAO {
                 empresa.setCep(resultado.getString("cep"))
                 empresa.setDescricao(resultado.getString("descricao"))
 
-                //List<String> comp = new ArrayList<>()
-                //comp.add(resultado.getString(""))
-                //empresa.setCompetencias(comp)
                 retorno.add(empresa)
             }
 
@@ -56,7 +52,6 @@ class PessoaJuridicaDAO {
         return retorno
     }
 
-    //INSERE NOVOS CANDIDATOS NO BANCO DE DADOS
     public boolean inserir(PessoaJuridica pessoa){
         String sql = "INSERT INTO empresas(nome, cnpj, email, descricao," +
                 "pais, cep, senha) VALUES (?,?,?,?,?,?,?)"
@@ -83,8 +78,6 @@ class PessoaJuridicaDAO {
 
     }
 
-
-    //ALTERA PELO CNPJ
     public boolean alterar(PessoaJuridica empresa, String cnpj){
         String sql = "UPDATE empresas SET nome=?, cnpj=?, email=?, descricao=?, pais=?, cep=?" +
                 " WHERE cnpj=?"
@@ -111,7 +104,6 @@ class PessoaJuridicaDAO {
 
     }
 
-    //REMOVE PELO CNPJ
     public void remover(String cnpj){
         String sql = "DELETE FROM empresas WHERE cnpj=?"
         try{

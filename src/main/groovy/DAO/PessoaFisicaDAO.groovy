@@ -1,14 +1,12 @@
 package DAO
 
 import Pessoas.PessoaFisica
-import sun.util.logging.PlatformLogger
 
 import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.PreparedStatement
 import java.sql.ResultSet
 import java.sql.SQLException
-import java.util.logging.Logger
 
 class PessoaFisicaDAO {
 
@@ -23,13 +21,12 @@ class PessoaFisicaDAO {
             this.connection = DriverManager.getConnection(url, user, password)
         } catch (ClassNotFoundException | SQLException ex){
             println("Erro na conexão!")
-            //Logger.getLogger(PessoaFisicaDAO.class.getName()).log(PlatformLogger.Level.SEVERE, null, ex)
+
         }
 
 
     }
 
-    //Pega as pessoas do banco de dados e coloca dentro da lista
     public List<PessoaFisica> listar(){
         String sql = "SELECT * FROM candidatos"
         List<PessoaFisica> retorno = new ArrayList<>()
@@ -56,9 +53,6 @@ class PessoaFisicaDAO {
                 String idade = anoAtual - anoNasc[0].toInteger()
 
                 candidato.setIdade(idade as int)
-                //List<String> comp = new ArrayList<>()
-                //comp.add(resultado.getString(""))
-                //candidato.setCompetencias(comp)
                 retorno.add(candidato)
             }
 
@@ -70,7 +64,6 @@ class PessoaFisicaDAO {
         return retorno
     }
 
-    //INSERE NOVOS CANDIDATOS NO BANCO DE DADOS
     public boolean inserir(PessoaFisica pessoa){
         String sql = "INSERT INTO candidatos(nome, sobrenome,  data_de_nascimento, email, cpf," +
                 " pais, cep,  descricao, senha, id_competencias) VALUES (?,?,?,?,?,?,?,?,?,?)"
@@ -103,7 +96,6 @@ class PessoaFisicaDAO {
 
     }
 
-    //ALTERA PELO CPF
     public boolean alterar(PessoaFisica pessoa, String cpf){
         String sql = "UPDATE candidatos SET nome=?, sobrenome=?, data_de_nascimento=?, email=?, cpf=?, pais=?, cep=?, descricao=?" +
                 " WHERE cpf=?"
@@ -136,7 +128,6 @@ class PessoaFisicaDAO {
 
     }
 
-    //REMOVE PELO CPF
     public void remover(String cpf){
         String sql = "DELETE FROM candidatos WHERE cpf=?"
         try{
