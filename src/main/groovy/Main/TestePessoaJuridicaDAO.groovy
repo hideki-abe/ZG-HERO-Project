@@ -4,7 +4,7 @@ import DAO.PessoaFisicaDAO
 import DAO.PessoaJuridicaDAO
 import Pessoas.PessoaJuridica
 
-class MainEmpresa {
+class TestePessoaJuridicaDAO {
 
     static void main(String[] args) {
 

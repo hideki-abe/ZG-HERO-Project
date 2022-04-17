@@ -4,7 +4,7 @@ import DAO.PessoaFisicaDAO
 import Pessoas.Pessoa
 import Pessoas.PessoaFisica
 
-class MainCandidato {
+class TesteCandidatoDAO {
 
     static void main(String[] args) {
 

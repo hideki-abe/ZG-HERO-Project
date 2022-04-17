@@ -3,7 +3,7 @@ package Main
 import Competencias.Competencia
 import DAO.CompetenciasDAO
 
-class MainCompetencias {
+class TesteCompetenciasDAO {
 
     static void main(String[] args) {
 

@@ -19,7 +19,7 @@ class Vaga {
         this.id_empresas = id_empresas
         this.id_competencais = id_competencias
     }
-    
+
     @Override
     String toString() {
         return this.nome + "\n " + this.desc + "\n" + this.lugar + "\n"

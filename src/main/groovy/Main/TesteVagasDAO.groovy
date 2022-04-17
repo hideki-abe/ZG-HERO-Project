@@ -3,7 +3,7 @@ package Main
 import DAO.VagasDAO
 import Vagas.Vaga
 
-class MainVagas {
+class TesteVagasDAO {
     static void main(String[] args) {
 
         //LISTANDO VAGAS
