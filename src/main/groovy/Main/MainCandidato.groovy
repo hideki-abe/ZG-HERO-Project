@@ -10,18 +10,15 @@ class MainCandidato {
 
         //INSERÇÃO DE CANDIDATOS
         List<String> competencia = new ArrayList<>()
-        /*
         PessoaFisica candidato = new PessoaFisica("Alberto Sousa", "alberto@email.com",
                 "11111", 30, "Brasil", "74455050", "Estudante de TI", competencia)
         competencia.add("React")
         inserir(candidato)
-        */
 
         //LISTAGEM DE CANDIDATOS
         listagem()
 
         //UPDATE
-
         PessoaFisica novoCandidato = new PessoaFisica("Alberto Silva", "alberto123@email.com",
                 "12345678", 30, "EUA", "74455050", "Estudante de TI", competencia)
         alterar(novoCandidato, "11111")
