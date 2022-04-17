@@ -30,11 +30,5 @@ class PessoaJuridica implements Pessoa{
                 "\n--------------------- \n"
         ;
     }
-
-    @Override
-    def cadastra(List lista) {
-        lista.add(new PessoaJuridica(this.nome, this.email, this.cnpj,
-                this.pais, this.estado, this.cep, this.descricao, this.competencias))
-        println "Cadastro realizado com sucesso!\n"
-    }
+    
 }
