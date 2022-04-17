@@ -4,12 +4,12 @@ class Competencia {
 
     String nome
 
-    public Competencia(String nome){
-        this.nome = nome
-    }
-
     public Competencia(){
 
+    }
+
+    public Competencia(String nome){
+        this.nome = nome
     }
 
     @Override
