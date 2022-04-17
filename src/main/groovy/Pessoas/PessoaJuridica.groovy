@@ -30,5 +30,5 @@ class PessoaJuridica implements Pessoa{
                 "\n--------------------- \n"
         ;
     }
-    
+
 }
