@@ -1,5 +1,6 @@
 package Pessoas
 
+import Competencias.Competencia
 import groovy.transform.Canonical
 
 @Canonical
@@ -12,13 +13,13 @@ class PessoaJuridica implements Pessoa{
     private String estado
     private def cep
     private String descricao
-    private List<String> competencias = []
+    private List<Competencia> competencias = []
 
     PessoaJuridica(){
     }
 
     PessoaJuridica(String nome, String email, cnpj, String pais,
-                   String estado, cep, String descricao, List<String> competencias) {
+                   String estado, cep, String descricao, List<Competencia> competencias) {
         this.nome = nome
         this.email = email
         this.cnpj = cnpj
@@ -85,11 +86,11 @@ class PessoaJuridica implements Pessoa{
         this.descricao = descricao
     }
 
-    List<String> getCompetencias() {
+    List<Competencia> getCompetencias() {
         return competencias
     }
 
-    void setCompetencias(List<String> competencias) {
+    void setCompetencias(List<Competencia> competencias) {
         this.competencias = competencias
     }
 
