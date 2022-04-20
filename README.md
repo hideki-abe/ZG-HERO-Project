@@ -64,7 +64,9 @@ As seguintes mudanças foram feitas:
 	- O: Nesse princípio, foram analisadas as classes das entidades(Competência, PessoaFisica e PessoaJuridica). Como Competência é uma classe sem relações com as outras, está tudo Ok com ela. As classes PessoaFisica e PessoaJuridica já possuiam uma interface que seria como uma abstração e é possível extender o comportamento de Pessoa. 
 	- L: A substituição de Liskov pode ser observada na interface Pessoa, em que uma instanciação de PessoaFisica pode ser substituida por Pessoa, apesar de não poder ser instanciada diretamente.
 	- I: O princípio da segregação da interface está sendo utilizado na interface Pessoa que está implementada em PessoaFisica e PessoaJuridica.
-	- D: Esse princípio eu vou conseguir integrar melhor depois de implementar o padrão MVC. 
+	- D: Esse princípio eu vou conseguir integrar melhor depois de implementar o padrão MVC.
+	
+Nessa parte também foi implementado o encapsulamento das entidades. 
 
 <h3>Executando o projeto: Backend </h3>
   Para executar o projeto, é necessário utilizar a IDE Intellijj para maior compatibilidade. Ao se abrir o projeto, é possível rodar o painel principal "Main" na própria IDE, ou também os testes unitários dando <b>run</b> na classe.
