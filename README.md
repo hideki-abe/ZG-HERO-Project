@@ -50,7 +50,7 @@ Nessa parte do projeto, foram refatoradas as seguintes classes seguintos os prin
 	- Testes DAO (implementação)
 
 <h3>7) Sétima parte do projeto(K2-T2: Princípios SOLID)</h3>
-Os princípios SOLID foram adotados nessa parte do projeto. 
+Os princípios SOLID foram adotados nessa parte do projeto na parte do Backend.
 
     S: princípio da responsabilidade única;
     O: princípio aberto/fechado;
