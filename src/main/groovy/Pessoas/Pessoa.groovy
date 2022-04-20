@@ -2,5 +2,4 @@ package Pessoas
 
 interface Pessoa {
 
-
 }

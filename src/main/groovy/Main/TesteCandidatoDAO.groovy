@@ -1,7 +1,6 @@
 package Main
 
 import DAO.PessoaFisicaDAO
-import Pessoas.Pessoa
 import Pessoas.PessoaFisica
 
 class TesteCandidatoDAO {
@@ -11,7 +10,7 @@ class TesteCandidatoDAO {
         //INSERÇÃO DE CANDIDATOS
         List<String> competencia = new ArrayList<>()
         PessoaFisica candidato = new PessoaFisica("Alberto Sousa", "alberto@email.com",
-                "11111", 30, "Brasil", "74455050", "Estudante de TI", competencia)
+                "11111", 30, "Brasil", "74455050", "Estudante de TI", null)
         competencia.add("React")
         inserir(candidato)
 
@@ -20,7 +19,7 @@ class TesteCandidatoDAO {
 
         //UPDATE
         PessoaFisica novoCandidato = new PessoaFisica("Alberto Silva", "alberto123@email.com",
-                "12345678", 30, "EUA", "74455050", "Estudante de TI", competencia)
+                "12345678", 30, "EUA", "74455050", "Estudante de TI", null)
         alterar(novoCandidato, "11111")
 
         //LISTAGEM DE CANDIDATOS

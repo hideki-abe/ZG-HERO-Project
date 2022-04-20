@@ -16,9 +16,4 @@ class ListaDePessoas {
         println this.empresas
     }
 
-    def insereCandidato(){
-
-    }
-
-
 }

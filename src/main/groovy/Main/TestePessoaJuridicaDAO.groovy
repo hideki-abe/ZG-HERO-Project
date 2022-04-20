@@ -14,14 +14,14 @@ class TestePessoaJuridicaDAO {
         //INSERE EMPRESA
         PessoaJuridica empresa1 = new PessoaJuridica("Empresa2","empresa2@email.com",
                 "11111111111", "Brasil", "São Paulo", "11111111",
-                "Descrição da empresa 2!")
+                "Descrição da empresa 2!", null)
         def list = ["Html/Css", "Javascript", "Angular"]
         empresa1.setCompetencias(list)
         insere(empresa1)
 
         PessoaJuridica empresa2 = new PessoaJuridica("Creme Mel","empresa2@email.com",
                 "11111111111", "Brasil", "Goiás", "11111111",
-                "Descrição da Creme Mel!")
+                "Descrição da Creme Mel!", null)
         list = ["Html/Css", "Javascript", "Angular"]
         empresa2.setCompetencias(list)
 

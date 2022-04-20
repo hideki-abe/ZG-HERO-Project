@@ -97,25 +97,26 @@ class PessoaFisicaDAO {
     }
 
     public boolean alterar(PessoaFisica pessoa, String cpf){
-        String sql = "UPDATE candidatos SET nome=?, sobrenome=?, data_de_nascimento=?, email=?, cpf=?, pais=?, cep=?, descricao=?" +
-                " WHERE cpf=?"
+        String sql = "UPDATE candidatos SET nome=?, sobrenome=?, data_de_nascimento=?, email=?, " +
+                "cpf=?, pais=?, cep=?, descricao=? WHERE cpf=?"
+        def nomeCompleto = pessoa.getNome()
+        def split = nomeCompleto.trim().split("[,.!?'@_] *| +")
+        String primeiroNome = split[0]
+        String sobrenome = split[1]
+
         try{
-
-            def nomeCompleto = pessoa.getNome()
-            def split = nomeCompleto.trim().split("[,.!?'@_] *| +")
-            String primeiroNome = split[0]
-            String sobrenome = split[1]
-
             PreparedStatement stmt = connection.prepareStatement(sql)
-            stmt.setString(5, pessoa.cpf.toString())
+            stmt.setString(9, pessoa.cpf.toString())
             stmt.setString(1, primeiroNome)
             stmt.setString(2, sobrenome)
             stmt.setString(3, pessoa.idade.toString())
             stmt.setString(4, pessoa.email)
+            stmt.setString(5, pessoa.cpf.toString())
             stmt.setString(6, pessoa.estado)
             stmt.setString(7, pessoa.cep.toString())
             stmt.setString(8, pessoa.descricao)
-            stmt.setString(9, pessoa.cpf.toString())
+
+
             stmt.execute()
             return true
 
