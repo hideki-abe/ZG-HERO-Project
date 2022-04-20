@@ -106,6 +106,20 @@ INSERT INTO vagas(nome, descricao, lugar, id_empresas, id_competencias) VALUES (
 'Brasil', 4, 2); </br>
 INSERT INTO vagas(nome, descricao, lugar, id_empresas, id_competencias) VALUES ('Desenvolvedor Angular', 'Procuramos aprendizes', 'Brasil', 5, 2);
 
+<h3>6) Sexta parte do projeto(K2-T1: Clean Code)</h3>
+Nessa parte do projeto, foram refatoradas as seguintes classes seguintos os princípios do CLEAN CODE.
+	Classes refatoradas:
+	
+ 	- Competencia (legibilidade)
+ 	- ListaDePessoas (exclusão de métodos não utilizados)
+ 	- Main (excluída)
+	- Pessoas (exclusão de métodos não utilizados)
+	- Vaga (formatação)
+	- Testes unitários (remoção)
+	- Testes DAO (implementação)
+
+<h3>7) Sétima parte do projeto(K2-T2: Princípios SOLID)</h3>
+Os princípios SOLID foram adotados nessa parte do projeto e as seguintes mudanças foram feitas: 
 
 
 <h3>Executando o projeto: Backend </h3>
