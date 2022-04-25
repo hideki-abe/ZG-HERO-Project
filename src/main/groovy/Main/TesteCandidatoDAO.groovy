@@ -8,6 +8,7 @@ class TesteCandidatoDAO {
     static void main(String[] args) {
 
         //INSERÇÃO DE CANDIDATOS
+
         List<String> competencia = new ArrayList<>()
         PessoaFisica candidato = new PessoaFisica("Alberto Sousa", "alberto@email.com",
                 "11111", 30, "Brasil", "74455050", "Estudante de TI", null)
