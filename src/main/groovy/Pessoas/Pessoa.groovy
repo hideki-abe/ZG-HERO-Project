@@ -1,5 +1,0 @@
-package Pessoas
-
-interface Pessoa {
-
-}

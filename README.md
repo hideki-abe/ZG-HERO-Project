@@ -33,7 +33,7 @@ A aplicação se resume à um programa que simule um tinder para empresas e cand
 
   - Na etapa de banco de dados, o projeto introdutório consistiu em criar o SQL das tabelas e realizas inserts de alguns candidatos e empresas. As seguintes tabelas foram desenvolvidas. A workbench do MySQL foi utilizada para desenvolver o <a href="https://github.com/hideki-abe/ZG-HERO-Project/blob/master/MER/MER.png">MER do projeto</a>. <br/>
   - <a href="https://github.com/hideki-abe/ZG-HERO-Project/blob/master/linkedtinder.sql">SQL da modelagem do Banco de dados.</a>
-  - As classes do banco de dados estão na pasta DAO e para rodar com a integração no BD, uma classe Main foi desenvolvida para cada tabela do MER. Basta rodar cada Main separadamente e testar os CRUDS no Banco de Dados. </br> </br>
+  - As classes do banco de dados estão na pasta dao e para rodar com a integração no BD, uma classe main foi desenvolvida para cada tabela do MER. Basta rodar cada main separadamente e testar os CRUDS no Banco de Dados. </br> </br>
 	
 
 
@@ -43,11 +43,11 @@ Nessa parte do projeto, foram refatoradas as seguintes classes seguintos os prin
 	
  	- Competencia (legibilidade)
  	- ListaDePessoas (exclusão de métodos não utilizados)
- 	- Main (excluída)
-	- Pessoas (exclusão de métodos não utilizados)
+ 	- main (excluída)
+	- model.Pessoas (exclusão de métodos não utilizados)
 	- Vaga (formatação)
 	- Testes unitários (remoção)
-	- Testes DAO (implementação)
+	- Testes dao (implementação)
 
 <h3>7) Sétima parte do projeto(K2-T2: Princípios SOLID)</h3>
 Os princípios SOLID foram adotados nessa parte do projeto na parte do Backend.
@@ -60,7 +60,7 @@ Os princípios SOLID foram adotados nessa parte do projeto na parte do Backend.
 
 As seguintes mudanças foram feitas:
 
-	- S: Em relação ao princípio da responsabilidade única eu achei que as funções estavam Ok, com responsabilidades única, salvo as classes DAO que precisam ter várias funções.
+	- S: Em relação ao princípio da responsabilidade única eu achei que as funções estavam Ok, com responsabilidades única, salvo as classes dao que precisam ter várias funções.
 	- O: Nesse princípio, foram analisadas as classes das entidades(Competência, PessoaFisica e PessoaJuridica). Como Competência é uma classe sem relações com as outras, está tudo Ok com ela. As classes PessoaFisica e PessoaJuridica já possuiam uma interface que seria como uma abstração e é possível extender o comportamento de Pessoa. 
 	- L: A substituição de Liskov pode ser observada na interface Pessoa, em que uma instanciação de PessoaFisica pode ser substituida por Pessoa, apesar de não poder ser instanciada diretamente.
 	- I: O princípio da segregação da interface está sendo utilizado na interface Pessoa que está implementada em PessoaFisica e PessoaJuridica.
@@ -69,5 +69,5 @@ As seguintes mudanças foram feitas:
 Nessa parte também foi implementado o encapsulamento das entidades. 
 
 <h3>Executando o projeto: Backend </h3>
-  Para executar o projeto, é necessário utilizar a IDE Intellijj para maior compatibilidade. Ao se abrir o projeto, é possível rodar o painel principal "Main" na própria IDE, ou também os testes unitários dando <b>run</b> na classe.
+  Para executar o projeto, é necessário utilizar a IDE Intellijj para maior compatibilidade. Ao se abrir o projeto, é possível rodar o painel principal "main" na própria IDE, ou também os testes unitários dando <b>run</b> na classe.
   
