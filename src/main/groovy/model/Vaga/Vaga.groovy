@@ -1,4 +1,4 @@
-package model.Vagas
+package model.Vaga
 
 class Vaga {
 

@@ -1,4 +1,4 @@
-package model.Competencias
+package model.Competencia
 
 class Competencia {
 

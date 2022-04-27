@@ -1,6 +1,6 @@
 package dao.competencias
 
-import model.Competencias.Competencia
+import model.Competencia.Competencia
 
 interface CompetenciaDAO {
 

@@ -3,7 +3,7 @@ package main
 
 import dao.vaga.VagaDAO
 import factory.vaga.VagaCC
-import model.Vagas.Vaga
+import model.Vaga.Vaga
 
 class TesteVagaDAO {
     static void main(String[] args) {

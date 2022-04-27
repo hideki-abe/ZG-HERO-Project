@@ -1,6 +1,6 @@
 package model.Pessoas
 
-import model.Competencias.Competencia
+import model.Competencia.Competencia
 import groovy.transform.Canonical
 
 @Canonical

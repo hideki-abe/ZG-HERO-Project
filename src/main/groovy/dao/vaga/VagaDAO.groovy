@@ -1,6 +1,6 @@
 package dao.vaga
 
-import model.Vagas.Vaga
+import model.Vaga.Vaga
 
 interface VagaDAO {
 

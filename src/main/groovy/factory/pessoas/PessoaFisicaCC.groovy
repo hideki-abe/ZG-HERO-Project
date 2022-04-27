@@ -6,7 +6,7 @@ import dao.pessoas.PessoaDAO
 class PessoaFisicaCC extends PessoaFactory{
 
     @Override
-    public PessoaDAO createPessoa() {
+    PessoaDAO createPessoa() {
         return new JDBCPessoaFisicaDAO()
     }
 }

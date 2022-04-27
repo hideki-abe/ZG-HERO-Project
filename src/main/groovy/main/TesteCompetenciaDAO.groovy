@@ -2,7 +2,7 @@ package main
 
 import dao.competencias.CompetenciaDAO
 import factory.competencia.CompetenciaCC
-import model.Competencias.Competencia
+import model.Competencia.Competencia
 
 class TesteCompetenciaDAO {
 

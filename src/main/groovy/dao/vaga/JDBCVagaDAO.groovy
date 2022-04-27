@@ -2,7 +2,7 @@ package dao.vaga
 
 
 import factory.ConnectionFactory
-import model.Vagas.Vaga
+import model.Vaga.Vaga
 
 import java.sql.Connection
 import java.sql.PreparedStatement
