@@ -68,6 +68,10 @@ As seguintes mudanças foram feitas:
 	
 Nessa parte também foi implementado o encapsulamento das entidades. 
 
+<h3>8) Oitava parte do projeto(K2-T3: Design Patterns)</h3>
+	O padrão Factory foi implementado nessa parte do projeto nas classes DAO. Além disso, uma ConnectionFactory foi implementada para menor acoplamento e faciliade de manutenção. 
+
+
 <h3>Executando o projeto: Backend </h3>
   Para executar o projeto, é necessário utilizar a IDE Intellijj para maior compatibilidade. Ao se abrir o projeto, é possível rodar o painel principal "main" na própria IDE, ou também os testes unitários dando <b>run</b> na classe.
   
