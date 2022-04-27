@@ -3,14 +3,13 @@ package main
 import dao.competencias.CompetenciaDAO
 import factory.competencia.CompetenciaCC
 import model.Competencias.Competencia
-import dao.competencias.JDBCCompetenciaDAO
 
 class TesteCompetenciaDAO {
 
     static void main(String[] args) {
 
         //LISTA COMPETENCIAS
-        lista()
+        listar()
 
         //INSERE COMPETENCIAS
         Competencia comp = new Competencia("Python")
@@ -18,15 +17,15 @@ class TesteCompetenciaDAO {
 
         //ALTERA COMPETENCIAS
         comp.nome = "Ruby"
-        altera(comp, "Python")
+        alterar(comp, "Python")
 
         //REMOVE COMPETENCIAS
-        remove("Ruby")
+        remover("Ruby")
 
 
     }
 
-    def static lista(){
+    def static listar(){
         CompetenciaDAO compDAO = new CompetenciaCC().createCompetencia()
         println(compDAO.listar())
     }
@@ -36,12 +35,12 @@ class TesteCompetenciaDAO {
         compDAO.inserir(comp)
     }
 
-    def static altera(Competencia comp, String nome){
+    def static alterar(Competencia comp, String nome){
         CompetenciaDAO compDAO = new CompetenciaCC().createCompetencia()
         compDAO.alterar(comp, nome)
     }
 
-    def static remove(String nome){
+    def static remover(String nome){
         CompetenciaDAO compDAO = new CompetenciaCC().createCompetencia()
         compDAO.remover(nome)
     }

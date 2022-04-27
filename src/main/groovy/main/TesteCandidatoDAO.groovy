@@ -10,7 +10,7 @@ class TesteCandidatoDAO {
 
     static void main(String[] args) {
 
-        listagem()
+        listar()
 
         //INSERÇÃO DE CANDIDATOS
         List<String> competencia = new ArrayList<>()
@@ -20,7 +20,7 @@ class TesteCandidatoDAO {
         inserir(candidato)
 
         //LISTAGEM DE CANDIDATOS
-        listagem()
+        listar()
 
         //UPDATE
         PessoaFisica novoCandidato = new PessoaFisica("Alberto Silva", "alberto123@email.com",
@@ -28,14 +28,14 @@ class TesteCandidatoDAO {
         alterar(novoCandidato, "11111")
 
         //LISTAGEM DE CANDIDATOS
-        listagem()
+        listar()
 
         //REMOÇÃO DE CANDIDATOS
         remover("12345678")
 
     }
 
-    def static listagem(){
+    def static listar(){
         PessoaDAO candidatoDAO = new PessoaFisicaCC().createPessoa()
         println(candidatoDAO.listar())
     }

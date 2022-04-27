@@ -20,7 +20,7 @@ class TesteVagaDAO {
         alterar(vaga, "Engenheiro de Software")
 
         //REMOVENDO VAGA
-        remove("Data Scientist")
+        remover("Data Scientist")
 
     }
 
@@ -39,7 +39,7 @@ class TesteVagaDAO {
         vagasDAO.alterar(vaga, nome)
     }
 
-    def static remove(String nome){
+    def static remover(String nome){
         VagaDAO vagasDAO = new VagaCC().createVagas()
         vagasDAO.remover(nome)
     }

@@ -1,7 +1,6 @@
 package main
 
 
-import dao.pessoas.JDBCPessoaJuridicaDAO
 import dao.pessoas.PessoaDAO
 import factory.pessoas.PessoaJuridicaCC
 import model.Pessoas.PessoaJuridica
@@ -19,7 +18,7 @@ class TestePessoaJuridicaDAO {
                 "Descrição da empresa 2!", null)
         def list = ["Html/Css", "Javascript", "Angular"]
         empresa1.setCompetencias(list)
-        insere(empresa1)
+        inserir(empresa1)
 
         PessoaJuridica empresa2 = new PessoaJuridica("Creme Mel","empresa2@email.com",
                 "11111111111", "Brasil", "Goiás", "11111111",
@@ -28,10 +27,10 @@ class TestePessoaJuridicaDAO {
         empresa2.setCompetencias(list)
 
         //ALTERA EMPRESA
-        altera(empresa2,"11111111111")
+        alterar(empresa2,"11111111111")
 
         //REMOVE EMPRESA
-        remove("11111111111")
+        remover("11111111111")
 
     }
 
@@ -40,19 +39,19 @@ class TestePessoaJuridicaDAO {
         println(empresa.listar())
     }
 
-    def static insere(PessoaJuridica empresa){
+    def static inserir(PessoaJuridica empresa){
         PessoaDAO empresaDAO = new PessoaJuridicaCC().createPessoa()
         empresaDAO.inserir(empresa)
 
     }
 
-    def static altera(PessoaJuridica empresa, String cnpj){
+    def static alterar(PessoaJuridica empresa, String cnpj){
         PessoaDAO empresaDAO = new PessoaJuridicaCC().createPessoa()
         empresaDAO.alterar(empresa, cnpj)
 
     }
 
-    def static remove(String cnpj){
+    def static remover(String cnpj){
         PessoaDAO empresaDAO = new PessoaJuridicaCC().createPessoa()
         empresaDAO.remover(cnpj)
     }
