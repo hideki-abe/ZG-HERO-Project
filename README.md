@@ -70,6 +70,14 @@ Nessa parte também foi implementado o encapsulamento das entidades.
 
 <h3>8) Oitava parte do projeto(K2-T3: Design Patterns)</h3>
 	O padrão Factory foi implementado nessa parte do projeto nas classes DAO. Além disso, uma ConnectionFactory foi implementada para menor acoplamento e faciliade de manutenção. 
+	
+<h3>9) Nona parte do projeto(K2-T4: Padrão MVC)</h3>
+	O padrão MVC foi implementado, dividindo-se a aplicação em: <br/> <br/>
+		- Package controller <br/>
+		- Package main (para testes no console) <br/>
+		- Packge model <br/> 
+		- Package view (que está nomeada como 'Frontend') <br/> <br/>
+	Como o Frontend da aplicação não está conectado com o Backend, apenas os testes unitários da classe controller foram implementados. 
 
 
 <h3>Executando o projeto: Backend </h3>
