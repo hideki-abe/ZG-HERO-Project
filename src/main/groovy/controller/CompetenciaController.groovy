@@ -16,8 +16,8 @@ class CompetenciaController {
         compDAO.inserir(comp)
     }
 
-    void altera(String nome){
-        compDAO.alterar(nome)
+    void altera(Competencia comp, String nome){
+        compDAO.alterar(comp, nome)
     }
 
     void remove(String nome){
