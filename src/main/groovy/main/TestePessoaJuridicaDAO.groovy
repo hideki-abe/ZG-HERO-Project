@@ -1,9 +1,9 @@
 package main
 
 
-import dao.pessoas.PessoaDAO
-import factory.pessoas.PessoaJuridicaCC
-import model.Pessoas.PessoaJuridica
+import model.dao.pessoas.PessoaDAO
+import model.factory.pessoas.PessoaJuridicaCC
+import model.pessoas.PessoaJuridica
 
 class TestePessoaJuridicaDAO {
 
@@ -20,14 +20,14 @@ class TestePessoaJuridicaDAO {
         empresa1.setCompetencias(list)
         inserir(empresa1)
 
-        PessoaJuridica empresa2 = new PessoaJuridica("Creme Mel","empresa2@email.com",
+        PessoaJuridica novaEmpresa = new PessoaJuridica("Creme Mel","empresa2@email.com",
                 "11111111111", "Brasil", "Goiás", "11111111",
                 "Descrição da Creme Mel!", null)
         list = ["Html/Css", "Javascript", "Angular"]
-        empresa2.setCompetencias(list)
+        novaEmpresa.setCompetencias(list)
 
         //ALTERA EMPRESA
-        alterar(empresa2,"11111111111")
+        alterar(novaEmpresa,"11111111111")
 
         //REMOVE EMPRESA
         remover("11111111111")

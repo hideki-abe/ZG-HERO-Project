@@ -1,8 +1,8 @@
 package main
 
-import dao.competencias.CompetenciaDAO
-import factory.competencia.CompetenciaCC
-import model.Competencia.Competencia
+import model.dao.competencia.CompetenciaDAO
+import model.factory.competencia.CompetenciaCC
+import model.competencia.Competencia
 
 class TesteCompetenciaDAO {
 

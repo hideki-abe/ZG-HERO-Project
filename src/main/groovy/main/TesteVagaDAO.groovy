@@ -1,9 +1,9 @@
 package main
 
 
-import dao.vaga.VagaDAO
-import factory.vaga.VagaCC
-import model.Vaga.Vaga
+import model.dao.vaga.VagaDAO
+import model.factory.vaga.VagaCC
+import model.vaga.Vaga
 
 class TesteVagaDAO {
     static void main(String[] args) {

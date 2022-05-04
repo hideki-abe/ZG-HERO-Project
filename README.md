@@ -44,7 +44,7 @@ Nessa parte do projeto, foram refatoradas as seguintes classes seguintos os prin
  	- Competencia (legibilidade)
  	- ListaDePessoas (exclusão de métodos não utilizados)
  	- main (excluída)
-	- model.Pessoas (exclusão de métodos não utilizados)
+	- model.pessoas (exclusão de métodos não utilizados)
 	- Vaga (formatação)
 	- Testes unitários (remoção)
 	- Testes dao (implementação)
