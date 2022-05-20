@@ -36,13 +36,13 @@ CREATE TABLE vagas (
 );
 
 CREATE TABLE candidatos_competencias (
-  id_candidato VARCHAR(5) NOT NULL,
-  id_competencia VARCHAR(5) NOT NULL
+  id_candidatos INT REFERENCES candidatos(id) NOT NULL,
+  id_competencias INT REFERENCES competencias(id) NOT NULL
 );
 
 CREATE TABLE empresas_competencias (
-  id_empresa VARCHAR(5) NOT NULL,
-  id_competencia VARCHAR(5) NOT NULL
+  id_empresas INT REFERENCES empresas(id) NOT NULL,
+  id_competencias INT REFERENCES competencias(id) NOT NULL
 );
 
 INSERT INTO competencias(nome) VALUES ('React');
