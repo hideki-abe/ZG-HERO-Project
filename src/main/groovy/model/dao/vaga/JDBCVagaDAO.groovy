@@ -42,7 +42,7 @@ class JDBCVagaDAO implements VagaDAO{
     }
 
     public boolean inserir(Vaga vaga){
-        String sql = "INSERT INTO vagas(nome, descricao, lugar, id_empresas, id_competencias) VALUES(?,?,?,?,?)"
+        String sql = "INSERT INTO vagas(nome, descricao, lugar, id_empresas) VALUES(?,?,?,?)"
 
         try{
             PreparedStatement stmt = connection.prepareStatement(sql)
@@ -50,7 +50,6 @@ class JDBCVagaDAO implements VagaDAO{
             stmt.setString(2, vaga.getDesc())
             stmt.setString(3, vaga.getLugar())
             stmt.setInt(4, vaga.getId_empresas())
-            stmt.setInt(5, vaga.getId_competencais())
 
             stmt.execute()
             return true

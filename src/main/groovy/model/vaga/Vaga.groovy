@@ -6,17 +6,17 @@ class Vaga {
     private String desc
     private String lugar
     private int id_empresas
-    private int id_competencais
+    private List competencias
 
     public Vaga(){
     }
 
-    public Vaga(String nome, String descricao, String lugar, int id_empresas, int id_competencias){
+    public Vaga(String nome, String descricao, String lugar, int id_empresas, List competencias){
         this.nome = nome
         this.desc = descricao
         this.lugar = lugar
         this.id_empresas = id_empresas
-        this.id_competencais = id_competencias
+        this.competencias = competencias
     }
 
     String getNome() {
@@ -51,16 +51,17 @@ class Vaga {
         this.id_empresas = id_empresas
     }
 
-    int getId_competencais() {
-        return id_competencais
+    List getCompetencias() {
+        return competencias
     }
 
-    void setId_competencais(int id_competencais) {
-        this.id_competencais = id_competencais
+    void setCompetencias(List competencias) {
+        this.competencias = competencias
     }
 
     @Override
     String toString() {
-        return "Vaga " + "\nNome: " + this.nome + "\nDescrição: " + this.desc + "\nLugar: " + this.lugar + "\n"
+        return "Vaga " + "\nNome: " + this.nome + "\nDescrição: " + this.desc
+        + "\nLugar: " + this.lugar + "\n" + this.competencias + "\n"
     }
 }

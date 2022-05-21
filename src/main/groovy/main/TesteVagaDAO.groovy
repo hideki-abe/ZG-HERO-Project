@@ -12,7 +12,7 @@ class TesteVagaDAO {
         listar()
 
         //INSERINDO VAGAS
-        Vaga vaga = new Vaga("Engenheiro de Software", "Arquiteto de BD", "Goiânia", 1, 2)
+        Vaga vaga = new Vaga("Engenheiro de Software", "Arquiteto de BD", "Goiânia", 1, null)
         inserir(vaga)
 
         //ALTERANDO VAGA
