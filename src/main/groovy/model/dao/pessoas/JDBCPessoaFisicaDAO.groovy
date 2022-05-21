@@ -19,7 +19,7 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
     }
 
     public List<PessoaFisica> listar(){
-        String sql = "SELECT * FROM candidatos"
+        String sql = "SELECT * FROM candidatos "
         List<PessoaFisica> retorno = new ArrayList<>()
 
         try {
@@ -57,7 +57,7 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
 
     public boolean inserir(Pessoa pessoa){
         String sql = "INSERT INTO candidatos(nome, sobrenome,  data_de_nascimento, email, cpf," +
-                " pais, cep,  descricao, senha, id_competencias) VALUES (?,?,?,?,?,?,?,?,?,?)"
+                " pais, cep,  descricao, senha) VALUES (?,?,?,?,?,?,?,?,?)"
         pessoa = pessoa as PessoaFisica
 
         println(pessoa)
@@ -77,7 +77,6 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
             stmt.setString(7, pessoa.cep.toString())
             stmt.setString(8, pessoa.descricao)
             stmt.setString(9, "123456")
-            stmt.setInt(10, 7)
             stmt.execute()
             return true
 

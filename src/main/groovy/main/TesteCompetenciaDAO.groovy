@@ -22,7 +22,15 @@ class TesteCompetenciaDAO {
         //REMOVE COMPETENCIAS
         remover("Ruby")
 
+        //ENCONTRA POR ID
+        println findById(5)
 
+
+    }
+
+    def static findById(int id){
+        CompetenciaDAO compDAO = new CompetenciaCC().createCompetencia()
+        compDAO.findNameById(id)
     }
 
     def static listar(){
