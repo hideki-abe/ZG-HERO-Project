@@ -40,8 +40,8 @@ CREATE TABLE candidatos_competencias (
   id_competencias INT REFERENCES competencias(id) NOT NULL
 );
 
-CREATE TABLE empresas_competencias (
-  id_empresas INT REFERENCES empresas(id) NOT NULL,
+CREATE TABLE vagas_competencias (
+  id_vagas INT REFERENCES empresas(id) NOT NULL,
   id_competencias INT REFERENCES competencias(id) NOT NULL
 );
 
@@ -76,3 +76,20 @@ INSERT INTO vagas(nome, descricao, lugar, id_empresas) VALUES ('Desenvolvedor fr
 INSERT INTO vagas(nome, descricao, lugar, id_empresas) VALUES ('Desenvolvedor fullstack', 'Procuramos dev fullstack Javascript/PHP', 'Brasil', 1);
 INSERT INTO vagas(nome, descricao, lugar, id_empresas) VALUES ('Desenvolvedor React', 'Procuramos dev Júnior frontend', 'Brasil', 4);
 INSERT INTO vagas(nome, descricao, lugar, id_empresas) VALUES ('Desenvolvedor Angular', 'Procuramos aprendizes', 'Brasil', 5);
+
+INSERT INTO candidatos_competencias(id_candidatos, id_competencias) valueS(1, 1);
+INSERT INTO candidatos_competencias(id_candidatos, id_competencias) valueS(2, 4);
+INSERT INTO candidatos_competencias(id_candidatos, id_competencias) valueS(3, 3);
+INSERT INTO candidatos_competencias(id_candidatos, id_competencias) valueS(4, 7);
+INSERT INTO candidatos_competencias(id_candidatos, id_competencias) valueS(5, 8);
+
+
+INSERT INTO vagas_competencias(id_vagas, id_competencias) valueS(1, 1);
+INSERT INTO vagas_competencias(id_vagas, id_competencias) valueS(2, 4);
+INSERT INTO vagas_competencias(id_vagas, id_competencias) valueS(3, 3);
+INSERT INTO vagas_competencias(id_vagas, id_competencias) valueS(4, 7);
+INSERT INTO vagas_competencias(id_vagas, id_competencias) valueS(5, 8);
+
+
+
+
