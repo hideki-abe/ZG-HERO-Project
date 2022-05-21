@@ -17,6 +17,23 @@ class JDBCCompetenciaDAO implements CompetenciaDAO{
         connection = ConnectionFactory.getConnection()
     }
 
+    public String findNameById(int id) {
+        String sql = "SELECT * FROM competencias WHERE id=?"
+        String name = null
+        try{
+            PreparedStatement stmt = connection.prepareStatement(sql)
+            stmt.setInt(1, id)
+            ResultSet resultado = stmt.executeQuery()
+            while(resultado.next()){
+                name = resultado.getString("nome")
+            }
+
+            return name
+        } catch(SQLException ex){
+            ex.printStackTrace()
+        }
+    }
+
     public List<Competencia> listar(){
         String sql = "SELECT * FROM competencias"
         List<Competencia> retorno = new ArrayList<>()
