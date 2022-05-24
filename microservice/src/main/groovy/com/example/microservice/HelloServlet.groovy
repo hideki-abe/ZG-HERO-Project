@@ -11,6 +11,7 @@ class HelloServlet extends HttpServlet {
         message = "Hello World!"
     }
 
+    @Override
     void doGet(HttpServletRequest request, HttpServletResponse response) {
         response.setContentType("text/html")
 

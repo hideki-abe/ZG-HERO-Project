@@ -1,7 +1,6 @@
 package model.pessoas
 
 import groovy.transform.Canonical
-import model.competencia.Competencia
 
 @Canonical
 class PessoaFisica implements Pessoa{
@@ -13,14 +12,13 @@ class PessoaFisica implements Pessoa{
     private String estado
     private def cep
     private String descricao
-    private List<Competencia> competencias = []
 
     PessoaFisica(){
 
     }
 
     PessoaFisica(String nome, String email, cpf, int idade,
-                 String estado, cep, String descricao, List<Competencia> competencias) {
+                 String estado, cep, String descricao) {
         this.nome = nome
         this.email = email
         this.cpf = cpf
@@ -28,7 +26,6 @@ class PessoaFisica implements Pessoa{
         this.estado = estado
         this.cep = cep
         this.descricao = descricao
-        this.competencias = competencias
     }
 
     String getNome() {
@@ -87,14 +84,6 @@ class PessoaFisica implements Pessoa{
         this.descricao = descricao
     }
 
-    List<Competencia> getCompetencias() {
-        return competencias
-    }
-
-    void setCompetencias(List<Competencia> competencias) {
-        this.competencias = competencias
-    }
-
     @Override
     public String toString() {
         return "Candidato: \n" +
@@ -106,7 +95,6 @@ class PessoaFisica implements Pessoa{
                 "Estado: " + estado + '\n' +
                 "Cep: " + cep + '\n' +
                 "Descrição: " + descricao + '\n' +
-                "Competências: " + competencias +
                 "\n--------------------- \n"
                 ;
     }

@@ -13,10 +13,8 @@ class TestePessoaFisicaDAO {
         listar()
 
         //INSERÇÃO DE CANDIDATOS
-        List<String> competencia = new ArrayList<>()
         Pessoa candidato = new PessoaFisica("Alberto Sousa", "alberto@email.com",
-                "11111", 30, "Brasil", "74455050", "Estudante de TI", null)
-        competencia.add("React")
+                "11111", 30, "Brasil", "74455050", "Estudante de TI")
         inserir(candidato)
 
         //LISTAGEM DE CANDIDATOS
@@ -24,7 +22,7 @@ class TestePessoaFisicaDAO {
 
         //UPDATE
         PessoaFisica novoCandidato = new PessoaFisica("Alberto Silva", "alberto123@email.com",
-                "12345678", 30, "EUA", "74455050", "Estudante de TI", null)
+                "12345678", 30, "EUA", "74455050", "Estudante de TI")
         alterar(novoCandidato, "11111")
 
         //LISTAGEM DE CANDIDATOS
