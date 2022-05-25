@@ -28,7 +28,23 @@ class PessoaFisicaController extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        super.doPost(req, resp)
+
+        println "Cadastrando novo candidato!"
+        String nome = req.getParameter("nome")
+        String email = req.getParameter("email")
+        String cpf = req.getParameter("cpf")
+        String idade = req.getParameter("idade")
+        String estado = req.getParameter("estado")
+        String cep = req.getParameter("cep")
+        String descricao = req.getParameter("descricao")
+        String senha = req.getParameter("senha")
+
+        //(String nome, String email, cpf, int idade, String estado, cep, String descricao)
+        Pessoa candidato = new PessoaFisica(nome, email, cpf, idade as int, estado, cep, descricao, senha)
+
+        candidatoDAO.inserir(candidato)
+
+
     }
 
     void imprime(){
@@ -40,9 +56,8 @@ class PessoaFisicaController extends HttpServlet{
 
     }
 
-    void altera(PessoaFisica candidato, String cpf){
+    void altera(PessoaFisica candidato, String cpf) {
         candidatoDAO.alterar(candidato, cpf)
-
     }
 
     void remove(String cpf){

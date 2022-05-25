@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+<c:url value="/cadastroCandidato" var="linkServletCadastroCandidato" />
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,12 +17,12 @@
 <div>
     <ul>
         <c:forEach items="${[1, 2, 3]}" var="num">
-            <li>num</li>
+            <li>${num}</li>
         </c:forEach>
     </ul>
 </div>
 <div class="painel_cadastro">
-    <form class="form_cadastro">
+    <form class="form_cadastro" action="${linkServletCadastroCandidato}" method="post">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome"><br>
         <label for="email">Email:</label><br>
@@ -36,10 +37,12 @@
         <input type="text" id="cep" name="cep"><br>
         <label for="descricao">Descrição:</label><br>
         <input type="text" id="descricao" name="descricao"><br>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha"><br>
+
+        <input id="link" type="submit"/>
     </form>
-    <a id="link" href="./cadastroCandidato">
-        <button type="submit" value="Cadastrar" class="botao_cadastrar">Cadastrar</button>
-    </a>
+
 </div>
 <script type="module" src="./cadastroCandidato.js"></script>
 </body>

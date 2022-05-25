@@ -12,12 +12,23 @@ class PessoaJuridica implements Pessoa{
     private String estado
     private def cep
     private String descricao
+    private String senha
 
     PessoaJuridica(){
     }
 
     PessoaJuridica(String nome, String email, cnpj, String pais,
                    String estado, cep, String descricao) {
+        this.nome = nome
+        this.email = email
+        this.cnpj = cnpj
+        this.pais = pais
+        this.estado = estado
+        this.cep = cep
+        this.descricao = descricao
+    }
+    PessoaJuridica(String nome, String email, cnpj, String pais,
+                   String estado, cep, String descricao, String senha) {
         this.nome = nome
         this.email = email
         this.cnpj = cnpj
@@ -81,6 +92,14 @@ class PessoaJuridica implements Pessoa{
 
     void setDescricao(String descricao) {
         this.descricao = descricao
+    }
+
+    String getSenha() {
+        return senha
+    }
+
+    void setSenha(String senha) {
+        this.senha = senha
     }
 
     @Override

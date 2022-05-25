@@ -35,15 +35,7 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
                 candidato.setCep(resultado.getString("cep"))
                 candidato.setDescricao(resultado.getString("descricao"))
 
-                String dataNasc = resultado.getString("data_de_nascimento")
-                String regex = /-/
-                def anoNasc = dataNasc.split(regex)
-
-                Calendar data = Calendar.getInstance()
-                def anoAtual = data.toYear()
-                String idade = anoAtual - anoNasc[0].toInteger()
-
-                candidato.setIdade(idade as int)
+                candidato.setIdade(resultado.getString("data_de_nascimento") as int)
                 retorno.add(candidato)
             }
 
@@ -61,7 +53,7 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
         pessoa = pessoa as PessoaFisica
 
         println(pessoa)
-        def nomeCompleto = pessoa.getNome()
+        def nomeCompleto = pessoa.nome
         def split = nomeCompleto.trim().split("[,.!?'@_] *| +")
         String primeiroNome = split[0]
         String sobrenome = split[1]
@@ -76,7 +68,7 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
             stmt.setString(6, pessoa.estado)
             stmt.setString(7, pessoa.cep.toString())
             stmt.setString(8, pessoa.descricao)
-            stmt.setString(9, "123456")
+            stmt.setString(9, pessoa.senha)
             stmt.execute()
             return true
 

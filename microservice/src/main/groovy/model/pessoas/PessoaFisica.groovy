@@ -12,6 +12,7 @@ class PessoaFisica implements Pessoa{
     private String estado
     private def cep
     private String descricao
+    private String senha
 
     PessoaFisica(){
 
@@ -27,6 +28,17 @@ class PessoaFisica implements Pessoa{
         this.cep = cep
         this.descricao = descricao
     }
+    PessoaFisica(String nome, String email, cpf, int idade,
+                 String estado, cep, String descricao, String senha) {
+        this.nome = nome
+        this.email = email
+        this.cpf = cpf
+        this.idade = idade
+        this.estado = estado
+        this.cep = cep
+        this.descricao = descricao
+    }
+
 
     String getNome() {
         return nome
@@ -82,6 +94,14 @@ class PessoaFisica implements Pessoa{
 
     void setDescricao(String descricao) {
         this.descricao = descricao
+    }
+
+    String getSenha() {
+        return senha
+    }
+
+    void setSenha(String senha) {
+        this.senha = senha
     }
 
     @Override
