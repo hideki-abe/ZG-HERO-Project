@@ -14,13 +14,6 @@
 </head>
 <body>
 <div class="titulo">CADASTRO DE CANDIDATO</div>
-<div>
-    <ul>
-        <c:forEach items="${[1, 2, 3]}" var="num">
-            <li>${num}</li>
-        </c:forEach>
-    </ul>
-</div>
 <div class="painel_cadastro">
     <form class="form_cadastro" action="${linkServletCadastroCandidato}" method="post">
         <label for="nome">Nome:</label><br>

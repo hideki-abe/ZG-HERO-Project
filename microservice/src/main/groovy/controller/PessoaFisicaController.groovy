@@ -39,29 +39,15 @@ class PessoaFisicaController extends HttpServlet{
         String descricao = req.getParameter("descricao")
         String senha = req.getParameter("senha")
 
+        println senha
+
         //(String nome, String email, cpf, int idade, String estado, cep, String descricao)
         Pessoa candidato = new PessoaFisica(nome, email, cpf, idade as int, estado, cep, descricao, senha)
 
         candidatoDAO.inserir(candidato)
 
+        RequestDispatcher rd = req.getRequestDispatcher("./cadastroCandidato.jsp")
+        rd.forward(req, resp)
 
     }
-
-    void imprime(){
-        println candidatoDAO.listar()
-    }
-
-    void insere(Pessoa candidato){
-        candidatoDAO.inserir(candidato)
-
-    }
-
-    void altera(PessoaFisica candidato, String cpf) {
-        candidatoDAO.alterar(candidato, cpf)
-    }
-
-    void remove(String cpf){
-        candidatoDAO.remover(cpf)
-    }
-
 }

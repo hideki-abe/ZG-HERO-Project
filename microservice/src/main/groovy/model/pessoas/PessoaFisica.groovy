@@ -8,7 +8,7 @@ class PessoaFisica implements Pessoa{
     private String nome
     private String email
     private def cpf
-    private int idade
+    private String idade
     private String estado
     private def cep
     private String descricao
@@ -64,11 +64,11 @@ class PessoaFisica implements Pessoa{
         this.cpf = cpf
     }
 
-    int getIdade() {
+    String getIdade() {
         return idade
     }
 
-    void setIdade(int idade) {
+    void setIdade(String idade) {
         this.idade = idade
     }
 

@@ -34,8 +34,9 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
                 candidato.setEstado(resultado.getString("pais"))
                 candidato.setCep(resultado.getString("cep"))
                 candidato.setDescricao(resultado.getString("descricao"))
+                String dataNasc = resultado.getString("data_de_nascimento")
+                candidato.setIdade(dataNasc)
 
-                candidato.setIdade(resultado.getString("data_de_nascimento") as int)
                 retorno.add(candidato)
             }
 
@@ -68,7 +69,7 @@ class JDBCPessoaFisicaDAO implements PessoaDAO{
             stmt.setString(6, pessoa.estado)
             stmt.setString(7, pessoa.cep.toString())
             stmt.setString(8, pessoa.descricao)
-            stmt.setString(9, pessoa.senha)
+            stmt.setString(9, "123456")
             stmt.execute()
             return true
 

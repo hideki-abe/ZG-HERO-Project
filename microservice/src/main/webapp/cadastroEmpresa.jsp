@@ -1,4 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
+<c:url value="/cadastroEmpresa" var="linkServletCadastroEmpresa" />
+
 <html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="../reset.css" media="screen"/>
@@ -11,14 +14,14 @@
     <body>
     <div class="titulo">CADASTRO DE EMPRESA</div>
     <div class="painel_cadastro">
-        <form class="form_cadastro">
+        <form class="form_cadastro" action="${linkServletCadastroEmpresa}" method="post">
             <label for="nome">Nome:</label><br>
             <input type="text" id="nome" name="nome"><br>
             <label for="email">Email:</label><br>
             <input type="text" id="email" name="email"><br>
-            <label for="cpf">Cnpj:</label><br>
+            <label for="cnpj">Cnpj:</label><br>
             <input type="text" id="cnpj" name="cnpj"><br>
-            <label for="idade">País:</label><br>
+            <label for="pais">País:</label><br>
             <input type="text" id="pais" name="pais"><br>
             <label for="estado">Estado:</label><br>
             <input type="text" id="estado" name="estado"><br>
@@ -26,10 +29,11 @@
             <input type="text" id="cep" name="cep"><br>
             <label for="descricao">Descrição:</label><br>
             <input type="text" id="descricao" name="descricao"><br>
+            <label for="senha">Senha:</label><br>
+            <input type="password" id="senha" name="senha"><br>
+
+            <input id="link" type="submit"/>
         </form>
-        <a id="link" href="./cadastroEmpresa">
-            <button type="submit" value="Cadastrar" class="botao_cadastrar">Cadastrar</button>
-        </a>
     </div>
     <script type="module" src="./cadastroEmpresa.js"></script>
     </body>

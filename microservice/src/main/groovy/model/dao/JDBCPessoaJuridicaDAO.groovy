@@ -59,7 +59,7 @@ class JDBCPessoaJuridicaDAO implements  PessoaDAO{
             stmt.setString(4, empresa.descricao)
             stmt.setString(5, empresa.pais)
             stmt.setString(6, empresa.cep.toString())
-            stmt.setString(7, empresa.senha)
+            stmt.setString(7, "123456")
 
             stmt.execute()
             return true
