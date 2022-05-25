@@ -14,10 +14,10 @@
             <div class="pergunta">
                 Você é uma pessoa física ou jurídica?
             </div>
-            <a href="../cadastroCandidato/cadastroCandidato.html">
+            <a href="./cadastroCandidato">
                 <button class="botao_fisica">FÍSICA</button>
             </a>
-            <a href="../cadastroEmpresa/cadastroEmpresa.html">
+            <a href="./cadastroEmpresa">
                 <button class="botao_juridica">JURÍDICA</button>
             </a>
         </div>
